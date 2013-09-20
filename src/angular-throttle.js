@@ -1,4 +1,4 @@
-angular.module('ato.lib', [])
+angular.module('ato.lib.timer.throttle', [])
     .service('atoThrottle', function($timeout) {
 
 
