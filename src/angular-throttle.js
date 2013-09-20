@@ -1,5 +1,5 @@
-angular.module('lfTimer', [])
-    .service('lfTimer', function($timeout) {
+angular.module('ato.lib', [])
+    .service('atoThrottle', function($timeout) {
 
 
         var setTimeout = $timeout,
