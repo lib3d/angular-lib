@@ -38,11 +38,10 @@ angular.module('ato.compileOnDemand', [])
             scope: true,
             controller: 'AtoScopeWatchersController',
             link: function(scope, element, attrs, ctrl) {
+                var name;
+                if(name = attrs.name) scope[name] = ctrl;
                 ctrl.freezeWatchers();
                 ctrl.detach();
-                scope.detach = ctrl.detach;
-                scope.attach = ctrl.attach;
-                scope.apply = ctrl.apply;
             }
         };
     });
