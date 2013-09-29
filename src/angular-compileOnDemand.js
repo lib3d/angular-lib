@@ -39,7 +39,7 @@ angular.module('ato.compileOnDemand', [])
             controller: 'AtoScopeWatchersController',
             link: function(scope, element, attrs, ctrl) {
                 var name;
-                if(name = attrs.name) scope[name] = ctrl;
+                if(scope.$parent && (name = attrs.name)) scope.$parent[name] = ctrl;
                 ctrl.freezeWatchers();
                 ctrl.detach();
             }
